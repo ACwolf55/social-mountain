@@ -22,7 +22,6 @@ class App extends Component {
   }
   
   componentDidMount() {
-    // e && e.preventDefault()
     axios.get(`https://practiceapi.devmountain.com/api/posts`).then(
       (res) => {
         this.setState({posts: res.data })
@@ -48,8 +47,8 @@ class App extends Component {
   }
 
   render() {
-    const { posts } = this.state;
-
+    const {posts}=this.state
+    
     return (
       <div className="App__parent">
         <Header />
